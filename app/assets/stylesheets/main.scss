@@ -1,0 +1,10 @@
+@import 'variables';
+
+body {
+  background: url('https://i.imgur.com/gl7VuKQ.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #000;
+  z-index: -1;
+  font: 300 1rem $secondary-font;
+}
