@@ -12,11 +12,11 @@ class NavBarLinks extends Component {
 
   render() {
     const linksList = this.state.links.map((linkName, i) => (
-      // <Route path="/" component={NavBarLinkItem} />
       <NavBarLinkItem key={linkName} linkName={linkName} />
     ));
 
     return <ul className="navbar_links">{linksList}</ul>;
+    // <Route path="/" component={NavBarLinkItem} />;
   }
 }
 

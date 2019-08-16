@@ -3,20 +3,19 @@ import React, { Component } from "react";
 class IntroModal extends Component {
   render() {
     return (
-      <div className="modal_bg">
+      <div className="modal_container">
         <div className="modal">
-          <h1>Welcome to finesseDesigns</h1>
-
-          {/* <img src="placeholder" alt=""/> */}
-
+          <h1>
+            finesse<span className="modal_span">Designs</span>
+          </h1>
           <p>
-            Please note this page uses Javascript and it should be enabled to
-            properly view this site. It is <span>best</span> viewed on a laptop
-            with a width of 900px or greater - any screen will do.
+            Please note this page uses Javascript and should be enabled to
+            properly view this site and have the best experience. Thanks for
+            visiting!
           </p>
 
           <button onClick={this.props.handleClick} type="submit">
-            Ok
+            Continue to page
           </button>
         </div>
       </div>

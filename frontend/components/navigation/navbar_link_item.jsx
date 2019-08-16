@@ -18,7 +18,11 @@ class NavBarLinkItem extends Component {
 
     return (
       <li>
-        <NavLink activeClassName="active" to={`/${linkName.toLowerCase()}/`}>
+        <NavLink
+          activeClassName="active"
+          className="nav_link"
+          to={`/${linkName.toLowerCase()}/`}
+        >
           {linkName}
         </NavLink>
       </li>
