@@ -17,16 +17,20 @@
       <%= alert %>
     <% end %>
     <% if current_user.nil? %>
-      <a href="<%= new_session_url %>" class='header_login button'>Sign in</a>
-      <a href="<%= new_user_url %>" class='header_sign_up_button'>Sign up</a>
+      <div class='login_div'>
+        <a href="<%= new_session_url %>" class='header_login button'>Sign in</a>
+        <a href="<%= new_user_url %>" class='header_sign_up_button'>Sign up</a>
+      </div>
     <% else %>
-      <%= current_user.username %>
-      <%# Logout button if theres a current_user %>
-      <form action="<%= session_url(current_user.id) %>" method="post">
-        <%= auth_token %>
-        <input type="hidden" name="_method" value="delete">
-        <input type="submit" value="Logout" id='header_logout_button'>
-      </form>
+      <div class='logout_div'>
+        <p>Welcome, <%= current_user.username %></p>
+        <%# Logout button if theres a current_user %>
+        <form action="<%= session_url(current_user.id) %>" method="post">
+          <%= auth_token %>
+          <input type="hidden" name="_method" value="delete">
+          <input type="submit" value="Logout" id='header_logout_button'>
+        </form>
+      </div>
     <% end %>
     <%= yield %>
   </body>
