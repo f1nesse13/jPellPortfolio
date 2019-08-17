@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import NavBarLinkItem from "./navbar_link_item";
-import { Route } from "react-router-dom";
-import { Hash } from "crypto";
+// import { Route } from "react-router-dom";
 class NavBarLinks extends Component {
   constructor(props) {
     super(props);

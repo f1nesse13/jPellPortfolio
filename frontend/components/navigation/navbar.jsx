@@ -9,7 +9,7 @@ class NavBar extends Component {
   }
 
   componentWillMount() {
-    this.setState({ active: true });
+    this.setState({ active: false });
   }
 
   render() {
