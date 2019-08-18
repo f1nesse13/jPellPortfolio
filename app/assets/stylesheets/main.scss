@@ -20,21 +20,6 @@ body,
   height: 100%;
 }
 
-.nav_link {
-  display: inline-block;
-  color: $teal;
-  line-height: 1;
-  padding: 10px;
-}
-
-.active,
-.active a {
-  color: $white;
-  font-size: 1.4rem;
-  // animation: shake .5s linear;
-  transition: all .2s linear;
-}
-
 .logout_div,
 .login_div {
   position: absolute;

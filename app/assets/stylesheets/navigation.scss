@@ -1,0 +1,86 @@
+@import 'variables';
+
+.fa-bars {
+  font-size: 2rem;
+  z-index: 2;
+  color: $white;
+  padding: 20px;
+  transition: all .1s linear;
+}
+
+.fa-bars:hover {
+  cursor: pointer;
+  color: $teal;
+}
+
+.hamburgerStyle {
+  transform: rotate(90deg);
+  color: $teal;
+}
+
+.hamburgerStyle:hover {
+  color: $white;
+}
+
+.navbar {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.nav_link {
+  display: inline-block;
+  color: $teal;
+  padding: 10px;
+}
+
+.active,
+.active a {
+  color: $white;
+  font-size: 1.4rem;
+  transition: all .2s linear;
+}
+
+.logo {
+  color: $white;
+}
+
+.logo_designs {
+  color: $teal;
+}
+
+.links_container {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.navbar_links {
+  display: flex;
+  font: 300 1.3rem $logo-font;
+  opacity: 0;
+  margin: 0;
+  z-index: 1;
+  transform: translateX(300%);
+  transition: all .4s linear;
+
+  .nav_link {
+    padding: 10px;
+    transition: all .3s linear;
+  }
+
+  .nav_link:hover {
+    color: $white;
+    transform: translateY(-10%);
+  }
+}
+
+.slideIn {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slideOut {
+  transform: translateX(300%);
+  opacity: 0;
+}
