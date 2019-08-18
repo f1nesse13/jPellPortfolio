@@ -5,20 +5,28 @@ import { Route } from "react-router-dom";
 class NavBar extends Component {
   constructor(props) {
     super(props);
-    this.state = { active: false };
+    this.state = { slide: true };
   }
 
-  componentWillMount() {
-    this.setState({ active: false });
+  handleClick() {
+    this.setState({
+      slide: !this.state.slide
+    });
   }
 
   render() {
+    const { showLinks, slide } = this.state;
+    let slideStatus = slide ? "slideIn" : "slideOut";
+    let hamburgerStyle = slide ? "hamburgerStyle" : "";
     return (
-      <nav className="nav_bar">
-        <header className="logo">
-          finesse <span className="logo_designs">Designs</span>
-        </header>
-        <Route path="/" component={NavBarLinks} />
+      <nav className="navbar">
+        <div className="links_container">
+          <i
+            className={`fas fa-bars ${hamburgerStyle}`}
+            onClick={this.handleClick.bind(this)}
+          ></i>
+          <NavBarLinks slideStatus={slideStatus} />
+        </div>
       </nav>
     );
   }
