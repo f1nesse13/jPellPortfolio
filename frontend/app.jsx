@@ -8,13 +8,21 @@ import IntroModal from "./components/modal/intro_modal";
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { active: true };
+    this.state = { active: "" };
+  }
+
+  componentDidMount() {
+    // only shows intro modal on new sessions
+    let bool;
+    bool = window.sessionStorage.intro ? false : true;
+    this.setState({ active: bool });
   }
 
   handleClick() {
     this.setState({
       active: false
     });
+    window.sessionStorage.intro = false;
   }
   render() {
     return (

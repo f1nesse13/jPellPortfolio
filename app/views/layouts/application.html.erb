@@ -4,40 +4,35 @@
     <title>JPellPortfolio</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <link
-  rel="stylesheet"
-  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-  crossorigin="anonymous"
-/>
-      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-      <link href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro&display=swap" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css?family=Roboto|Work+Sans|Raleway&display=swap" rel="stylesheet">
-    </head>
-    <body>
-      <% if notice %>
-        <%= notice %>
-      <% end %>
-      <% if alert %>
-        <%= alert %>
-      <% end %>
-      <% if current_user.nil? %>
-        <div class='login_div'>
-          <a href="<%= new_session_url %>" class='header_login button'>Sign in</a>
-          <a href="<%= new_user_url %>" class='header_sign_up_button'>Sign up</a>
-        </div>
-      <% else %>
-        <div class='logout_div'>
-          <p>Welcome, <%= current_user.username %></p>
-          <%# Logout button if theres a current_user %>
-          <form action="<%= session_url(current_user.id) %>" method="post">
-            <%= auth_token %>
-            <input type="hidden" name="_method" value="delete">
-            <input type="submit" value="Logout" id='header_logout_button'>
-          </form>
-        </div>
-      <% end %>
-      <%= yield %>
-    </body>
-  </html>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Work+Sans|Raleway&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a72d195975.js"></script>
+  </head>
+  <body>
+    <% if notice %>
+      <%= notice %>
+    <% end %>
+    <% if alert %>
+      <%= alert %>
+    <% end %>
+    <% if current_user.nil? %>
+      <div class='login_div'>
+        <a href="<%= new_session_url %>" class='header_login button'>Sign in</a>
+        <a href="<%= new_user_url %>" class='header_sign_up_button'>Sign up</a>
+      </div>
+    <% else %>
+      <div class='logout_div'>
+        <p>User: <%= current_user.username %></p>
+        <%# Logout button if theres a current_user %>
+        <form action="<%= session_url(current_user.id) %>" method="post">
+          <%= auth_token %>
+          <input type="hidden" name="_method" value="delete">
+          <input type="submit" value="Logout" id='header_logout_button'>
+        </form>
+      </div>
+    <% end %>
+    <%= yield %>
+  </body>
+</html>
