@@ -4,7 +4,7 @@ class About extends Component {
   render() {
     return (
       <section className="about">
-        <h1>About Me</h1>
+        <h1 className="about_title">About Me</h1>
         <p>
           I am a 32 year old fullstack developer working with mostly Rails and
           React. Although they are the main technologies I use for web

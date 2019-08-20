@@ -4,7 +4,12 @@ class Hero extends Component {
   render() {
     return (
       <header className="hero">
-        <h1>Hi I'm Joe a Software Developer</h1>
+        <h1 className="hero-title">
+          Hi I'm <span>Joe</span>
+        </h1>
+        <h1>
+          a <span>Software Developer</span>
+        </h1>
         <p>I am a full-stack web developer based out of Philadelphia, PA.</p>
         <p>
           Everything from web apps to websites development is my passion and I
