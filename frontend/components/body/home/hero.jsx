@@ -10,7 +10,7 @@ class Hero extends Component {
         <h1>
           a <span>Software Developer</span>
         </h1>
-        <p>I am a full-stack web developer based out of Philadelphia, PA.</p>
+        <p>I am a full-stack developer based out of Philadelphia, PA.</p>
         <p>
           Everything from web apps to websites development is my passion and I
           enjoy making peoples ideas come to life. I work with many different
