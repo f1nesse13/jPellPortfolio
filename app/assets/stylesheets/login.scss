@@ -11,6 +11,8 @@
   align-items: center;
   margin-right: 10px;
   font: 800 1.2rem 'Raleway', sans-serif;
+  transform: scale(0.5);
+  transition: all .2s linear;
 
   form input[type='submit'] {
     padding: 2px 15px;
@@ -28,4 +30,15 @@
     color: $black;
     background-color: $teal;
   }
+}
+
+.hover_div {
+  width: 200px;
+  height: 200px;
+}
+
+.hover_div:hover,
+.login_div:hover,
+.logout_div:hover {
+  transform: scale(1)
 }
