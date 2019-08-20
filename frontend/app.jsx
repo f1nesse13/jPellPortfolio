@@ -4,6 +4,7 @@ import { Route } from "react-router-dom";
 import Home from "./components/body/home/home";
 import About from "./components/body/about/about";
 import IntroModal from "./components/modal/intro_modal";
+import Landing from "./components/body/landing/landing";
 
 class App extends Component {
   constructor(props) {
@@ -33,6 +34,7 @@ class App extends Component {
           ""
         )}
         <Route path="/" component={NavBar} />
+        <Route exact path="/" component={Landing} />
         <Route exact path="/home" component={Home} />
         <Route exact path="/about" component={About} />
         {this.state.active ? <div className="modal_bg"></div> : ""}
