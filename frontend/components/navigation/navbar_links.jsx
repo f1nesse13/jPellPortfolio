@@ -1,11 +1,11 @@
-import React, { Component } from "react";
-import NavBarLinkItem from "./navbar_link_item";
+import React, { Component } from 'react';
+import NavBarLinkItem from './navbar_link_item';
 // import { Route } from "react-router-dom";
 class NavBarLinks extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      links: ["Home", "Blog", "Projects", "Contact", "About"]
+      links: ['Home', 'Blog', 'Projects', 'Contact', 'About'],
     };
   }
 
@@ -16,7 +16,6 @@ class NavBarLinks extends Component {
     ));
 
     return <ul className={`navbar_links ${slideStatus}`}>{linksList}</ul>;
-    // <Route path="/" component={NavBarLinkItem} />;
   }
 }
 
