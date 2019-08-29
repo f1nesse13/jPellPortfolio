@@ -22,3 +22,19 @@ body,
 .navbar {
   overflow: hidden;
 }
+
+.arrows {
+  position: fixed;
+  font-size: 54px;
+  opacity: 0.6;
+}
+
+.left-arrow {
+  top: 45%;
+  left: 5%;
+}
+
+.right-arrow {
+  top: 45%;
+  right: 5%;
+}

@@ -192,9 +192,311 @@ function (_Component) {
   !*** ./frontend/carousel.jsx ***!
   \*******************************/
 /*! exports provided: default */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /home/f1nesse13/Documents/projects/jPellPortfolio/frontend/carousel.jsx: Support for the experimental syntax 'classProperties' isn't currently enabled (18:13):\n\n\u001b[0m \u001b[90m 16 | \u001b[39m  }\u001b[0m\n\u001b[0m \u001b[90m 17 | \u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 18 | \u001b[39m  increment \u001b[33m=\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 19 | \u001b[39m    \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39msetState(prevProps \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m \u001b[90m 20 | \u001b[39m      \u001b[36mif\u001b[39m (prevProps\u001b[33m.\u001b[39mcount \u001b[33m===\u001b[39m prevProps\u001b[33m.\u001b[39mtotalPages \u001b[33m-\u001b[39m \u001b[35m1\u001b[39m) {\u001b[0m\n\u001b[0m \u001b[90m 21 | \u001b[39m        \u001b[36mreturn\u001b[39m { count\u001b[33m:\u001b[39m \u001b[35m0\u001b[39m }\u001b[33m;\u001b[39m\u001b[0m\n\nAdd @babel/plugin-proposal-class-properties (https://git.io/vb4SL) to the 'plugins' section of your Babel config to enable transformation.\n    at Object.raise (/home/f1nesse13/Documents/projects/jPellPortfolio/node_modules/@babel/parser/lib/index.js:6325:17)\n    at Object.expectPlugin (/home/f1nesse13/Documents/projects/jPellPortfolio/node_modules/@babel/parser/lib/index.js:7647:18)\n    at Object.parseClassProperty (/home/f1nesse13/Documents/projects/jPellPortfolio/node_modules/@babel/parser/lib/index.js:10830:12)\n    at Object.pushClassProperty (/home/f1nesse13/Documents/projects/jPellPortfolio/node_modules/@babel/parser/lib/index.js:10795:30)\n    at Object.parseClassMemberWithIsStatic (/home/f1nesse13/Documents/projects/jPellPortfolio/node_modules/@babel/parser/lib/index.js:10734:14)\n    at Object.parseClassMember (/home/f1nesse13/Documents/projects/jPellPortfolio/node_modules/@babel/parser/lib/index.js:10668:10)\n    at withTopicForbiddingContext (/home/f1nesse13/Documents/projects/jPellPortfolio/node_modules/@babel/parser/lib/index.js:10623:14)\n    at Object.withTopicForbiddingContext (/home/f1nesse13/Documents/projects/jPellPortfolio/node_modules/@babel/parser/lib/index.js:9702:14)\n    at Object.parseClassBody (/home/f1nesse13/Documents/projects/jPellPortfolio/node_modules/@babel/parser/lib/index.js:10600:10)\n    at Object.parseClass (/home/f1nesse13/Documents/projects/jPellPortfolio/node_modules/@babel/parser/lib/index.js:10574:22)\n    at Object.parseStatementContent (/home/f1nesse13/Documents/projects/jPellPortfolio/node_modules/@babel/parser/lib/index.js:9871:21)\n    at Object.parseStatement (/home/f1nesse13/Documents/projects/jPellPortfolio/node_modules/@babel/parser/lib/index.js:9829:17)\n    at Object.parseBlockOrModuleBlockBody (/home/f1nesse13/Documents/projects/jPellPortfolio/node_modules/@babel/parser/lib/index.js:10405:25)\n    at Object.parseBlockBody (/home/f1nesse13/Documents/projects/jPellPortfolio/node_modules/@babel/parser/lib/index.js:10392:10)\n    at Object.parseTopLevel (/home/f1nesse13/Documents/projects/jPellPortfolio/node_modules/@babel/parser/lib/index.js:9758:10)\n    at Object.parse (/home/f1nesse13/Documents/projects/jPellPortfolio/node_modules/@babel/parser/lib/index.js:11270:17)\n    at parse (/home/f1nesse13/Documents/projects/jPellPortfolio/node_modules/@babel/parser/lib/index.js:11306:38)\n    at parser (/home/f1nesse13/Documents/projects/jPellPortfolio/node_modules/@babel/core/lib/transformation/normalize-file.js:170:34)\n    at normalizeFile (/home/f1nesse13/Documents/projects/jPellPortfolio/node_modules/@babel/core/lib/transformation/normalize-file.js:138:11)\n    at runSync (/home/f1nesse13/Documents/projects/jPellPortfolio/node_modules/@babel/core/lib/transformation/index.js:44:43)\n    at runAsync (/home/f1nesse13/Documents/projects/jPellPortfolio/node_modules/@babel/core/lib/transformation/index.js:35:14)\n    at process.nextTick (/home/f1nesse13/Documents/projects/jPellPortfolio/node_modules/@babel/core/lib/transform.js:34:34)\n    at process._tickCallback (internal/process/next_tick.js:61:11)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _components_body_landing_landing__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/body/landing/landing */ "./frontend/components/body/landing/landing.jsx");
+/* harmony import */ var _components_body_about_about__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/body/about/about */ "./frontend/components/body/about/about.jsx");
+/* harmony import */ var _components_body_home_home__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/body/home/home */ "./frontend/components/body/home/home.jsx");
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+
+
+var Carousel =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(Carousel, _Component);
+
+  function Carousel(props) {
+    var _this;
+
+    _classCallCheck(this, Carousel);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Carousel).call(this, props));
+
+    _defineProperty(_assertThisInitialized(_this), "increment", function () {
+      _this.setState(function (prevProps) {
+        if (prevProps.count === prevProps.totalPages - 1) {
+          return {
+            count: 0,
+            currentPage: _this.state.displays[_this.state.count]
+          };
+        }
+
+        return {
+          count: prevProps.count + 1,
+          currentPage: _this.state.displays[_this.state.count]
+        };
+      });
+    });
+
+    _defineProperty(_assertThisInitialized(_this), "decrement", function () {
+      _this.setState(function (prevProps) {
+        if (prevProps.count === 0) {
+          return {
+            count: prevProps.totalPages - 1,
+            currentPage: _this.state.displays[_this.state.count]
+          };
+        }
+
+        return {
+          count: prevProps.count - 1,
+          currentPage: _this.state.displays[_this.state.count]
+        };
+      });
+    });
+
+    _this.state = {
+      count: 0,
+      displays: ['/', 'Home', 'Blog', 'Projects', 'Contact', 'About'],
+      totalPages: 6,
+      currentPage: 0
+    };
+    return _this;
+  }
+
+  _createClass(Carousel, [{
+    key: "componentWillMount",
+    value: function componentWillMount() {
+      // initial state -
+      this.setState({
+        currentPage: this.state.displays[this.state.count]
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var path = this.state.displays.indexOf(window.location.pathname.toString());
+      window.location.hash = this.state.currentPage;
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "app-window"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "arrows left-arrow fas fa-arrow-alt-circle-left" // Change path in window.location
+        ,
+        onClick: this.decrement
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+        exact: true,
+        path: "/",
+        component: _components_body_landing_landing__WEBPACK_IMPORTED_MODULE_2__["default"]
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+        exact: true,
+        path: "/home",
+        component: _components_body_home_home__WEBPACK_IMPORTED_MODULE_4__["default"]
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+        exact: true,
+        path: "/about",
+        component: _components_body_about_about__WEBPACK_IMPORTED_MODULE_3__["default"]
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "arrows right-arrow fas fa-arrow-alt-circle-right",
+        onClick: this.increment
+      }));
+    }
+  }]);
+
+  return Carousel;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (Carousel);
+
+/***/ }),
+
+/***/ "./frontend/components/body/about/about.jsx":
+/*!**************************************************!*\
+  !*** ./frontend/components/body/about/about.jsx ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+var About =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(About, _Component);
+
+  function About() {
+    _classCallCheck(this, About);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(About).apply(this, arguments));
+  }
+
+  _createClass(About, [{
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+        className: "about"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+        className: "about_title"
+      }, "About Me"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "I am a 32 year old fullstack developer working with mostly Rails and React. Although they are the main technologies I use for web applications I use some Ruby for scripting and have some knowledge of nodejs for backend programming. Some other tools I am familiar with are SQL and NoSQL databases such as postgres, SQLite and mongoDB as well as experience consuming and creating RESTful APIs."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "I've been writing code on and off since high school and have always had a passion for it. I decided to follow a career in the automotive industry which turned into a job in management. This gave me many skills that still assist me to this day. Although I enjoyed my work I made the decision to stay home when my first child was born. As time has gone on I've sharpened my skills and began taking development more seriously, consuming information from every source I could find. Development really draws me in and allows me to be creative, at times it is hard for me to tear myself away. I am a a great problem solver and love to be challenged. Development is a perfect fit for my skillset."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "As I become more entrenched in development I see myself leaning more and more towards the frontend - specifically with React. Although I really enjoy backend programming I see myself gravitating towards the frontend. So if I had to describe my speciality I would say I'm a fullstack developer specializing in React. Im my schooling we focused on full stack development with Ruby and Javascript. We started with Ruby fundamentals and moved onto Rails rather quickly. My skills in writing Ruby code became more and more refined. A lot of work I did with Ruby naturally led me to questions about computer science topics that I was then able to apply to Javascript and all other technologies I used afterwards. When we started Javascript I was familiar with it but had forgotten a lot of what I knew before. As with Ruby I quickly became accoustomed to writing Javascript and later, React all over again. Its been a fun journey to this point and I look forward to continue learning about new technology as I continue my career."));
+    }
+  }]);
+
+  return About;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (About);
+
+/***/ }),
+
+/***/ "./frontend/components/body/home/hero.jsx":
+/*!************************************************!*\
+  !*** ./frontend/components/body/home/hero.jsx ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+var Hero =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(Hero, _Component);
+
+  function Hero() {
+    _classCallCheck(this, Hero);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(Hero).apply(this, arguments));
+  }
+
+  _createClass(Hero, [{
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
+        className: "hero"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+        className: "hero-title"
+      }, "Hi I'm ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Joe")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "a ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Software Developer")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "I am a full-stack developer based out of Philadelphia, PA."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Everything from web apps to websites development is my passion and I enjoy making peoples ideas come to life. I work with many different technologies but primarily with Rails and React. If you'd like to see some of my projects, contact me or hear a little about myself please follow the appropriate links. A blog will also be coming soon which Im very excited to share with you. Thanks for visiting!"));
+    }
+  }]);
+
+  return Hero;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (Hero);
+
+/***/ }),
+
+/***/ "./frontend/components/body/home/home.jsx":
+/*!************************************************!*\
+  !*** ./frontend/components/body/home/home.jsx ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _hero__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./hero */ "./frontend/components/body/home/hero.jsx");
+
+
+
+var Home = function Home(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+    className: "home"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_hero__WEBPACK_IMPORTED_MODULE_1__["default"], null));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Home);
+
+/***/ }),
+
+/***/ "./frontend/components/body/landing/landing.jsx":
+/*!******************************************************!*\
+  !*** ./frontend/components/body/landing/landing.jsx ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var Landing = function Landing() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
+    className: "landing_header"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "landing_content"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+    className: "landing_title"
+  }, "Welcome to Finesse ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Designs")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "landing_text"
+  }, "Please use the links below to navigate - thanks for visiting!")));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Landing);
 
 /***/ }),
 
@@ -475,7 +777,7 @@ function (_Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(NavBarLinks).call(this, props));
     _this.state = {
-      links: ["Home", "Blog", "Projects", "Contact", "About"]
+      links: ['Home', 'Blog', 'Projects', 'Contact', 'About']
     };
     return _this;
   }
@@ -492,7 +794,7 @@ function (_Component) {
       });
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
         className: "navbar_links ".concat(slideStatus)
-      }, linksList); // <Route path="/" component={NavBarLinkItem} />;
+      }, linksList);
     }
   }]);
 

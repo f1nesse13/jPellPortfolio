@@ -1,15 +1,15 @@
-const path = require("path");
+const path = require('path');
 
 module.exports = {
-  mode: "development",
+  mode: 'development',
   context: __dirname,
-  entry: "./frontend/root.jsx",
+  entry: './frontend/root.jsx',
   output: {
-    path: path.resolve(__dirname, "app", "assets", "javascripts"),
-    filename: "bundle.js"
+    path: path.resolve(__dirname, 'app', 'assets', 'javascripts'),
+    filename: 'bundle.js',
   },
   resolve: {
-    extensions: [".js", ".jsx", "*"]
+    extensions: ['.js', '.jsx', '*'],
   },
   module: {
     rules: [
@@ -17,13 +17,19 @@ module.exports = {
         test: /\.jsx?$/,
         exclude: /(node_modules)/,
         use: {
-          loader: "babel-loader",
-          query: {
-            presets: ["@babel/env", "@babel/react"]
-          }
-        }
-      }
-    ]
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              '@babel/env',
+              '@babel/react',
+              {
+                plugins: ['@babel/plugin-proposal-class-properties'],
+              },
+            ],
+          },
+        },
+      },
+    ],
   },
-  devtool: "source-map"
+  devtool: 'source-map',
 };
