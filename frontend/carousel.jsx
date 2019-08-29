@@ -3,6 +3,9 @@ import { Route } from 'react-router-dom';
 import Landing from './components/body/landing/landing';
 import About from './components/body/about/about';
 import Home from './components/body/home/home';
+import Blog from './components/body/blog/blog';
+import Projects from './components/body/projects/projects';
+import Contact from './components/body/contact/contact';
 
 class Carousel extends Component {
   constructor(props) {
@@ -61,6 +64,9 @@ class Carousel extends Component {
         ></i>
         <Route exact path="/" component={Landing} />
         <Route exact path="/home" component={Home} />
+        <Route exact path="/blog" component={Blog} />
+        <Route exact path="/projects" component={Projects} />
+        <Route exact path="/contact" component={Contact} />
         <Route exact path="/about" component={About} />
         <i
           className="arrows right-arrow fas fa-arrow-alt-circle-right"

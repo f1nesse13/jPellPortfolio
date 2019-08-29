@@ -1,9 +1,10 @@
-import React, { Component } from "react";
-import ContactForm from "./contact_form";
-export default class Contact extends Component {
+import React, { Component } from 'react';
+import ContactForm from './contact_form';
+
+class Contact extends Component {
   constructor(props) {
     super(props);
-  } 
+  }
 
   render() {
     return (
