@@ -26,8 +26,12 @@ class Carousel extends Component {
   increment = () => {
     this.setState(prevProps => {
       if (prevProps.count === prevProps.totalPages - 1) {
+        window.location.hash = this.state.currentPage;
+
         return { count: 0, currentPage: this.state.displays[this.state.count] };
       }
+      window.location.hash = this.state.currentPage;
+
       return {
         count: prevProps.count + 1,
         currentPage: this.state.displays[this.state.count],
@@ -38,11 +42,13 @@ class Carousel extends Component {
   decrement = () => {
     this.setState(prevProps => {
       if (prevProps.count === 0) {
+        window.location.hash = this.state.currentPage;
         return {
           count: prevProps.totalPages - 1,
           currentPage: this.state.displays[this.state.count],
         };
       }
+      window.location.hash = this.state.currentPage;
       return {
         count: prevProps.count - 1,
         currentPage: this.state.displays[this.state.count],
@@ -54,7 +60,6 @@ class Carousel extends Component {
     const path = this.state.displays.indexOf(
       window.location.pathname.toString(),
     );
-    window.location.hash = this.state.currentPage;
     return (
       <div className="app-window">
         <i

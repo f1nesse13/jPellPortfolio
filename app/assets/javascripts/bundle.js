@@ -249,12 +249,14 @@ function (_Component) {
     _defineProperty(_assertThisInitialized(_this), "increment", function () {
       _this.setState(function (prevProps) {
         if (prevProps.count === prevProps.totalPages - 1) {
+          window.location.hash = _this.state.currentPage;
           return {
             count: 0,
             currentPage: _this.state.displays[_this.state.count]
           };
         }
 
+        window.location.hash = _this.state.currentPage;
         return {
           count: prevProps.count + 1,
           currentPage: _this.state.displays[_this.state.count]
@@ -265,12 +267,14 @@ function (_Component) {
     _defineProperty(_assertThisInitialized(_this), "decrement", function () {
       _this.setState(function (prevProps) {
         if (prevProps.count === 0) {
+          window.location.hash = _this.state.currentPage;
           return {
             count: prevProps.totalPages - 1,
             currentPage: _this.state.displays[_this.state.count]
           };
         }
 
+        window.location.hash = _this.state.currentPage;
         return {
           count: prevProps.count - 1,
           currentPage: _this.state.displays[_this.state.count]
@@ -299,7 +303,6 @@ function (_Component) {
     key: "render",
     value: function render() {
       var path = this.state.displays.indexOf(window.location.pathname.toString());
-      window.location.hash = this.state.currentPage;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "app-window"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
