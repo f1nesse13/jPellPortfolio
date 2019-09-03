@@ -304,9 +304,9 @@ function (_Component) {
     value: function render() {
       var path = this.state.displays.indexOf(window.location.pathname.toString());
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "app-window"
+        className: "content-window"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "arrows left-arrow fas fa-arrow-alt-circle-left" // Change path in window.location
+        className: "arrows left-arrow fas fa-arrow-left" // Change path in window.location
         ,
         onClick: this.decrement
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
@@ -334,7 +334,7 @@ function (_Component) {
         path: "/about",
         component: _components_body_about_about__WEBPACK_IMPORTED_MODULE_3__["default"]
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "arrows right-arrow fas fa-arrow-alt-circle-right",
+        className: "arrows right-arrow fas fa-arrow-right",
         onClick: this.increment
       }));
     }
@@ -514,7 +514,7 @@ function (_Component) {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
-        className: "contact_container"
+        className: "contact"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_contact_form__WEBPACK_IMPORTED_MODULE_1__["default"], null));
     }
   }]);
@@ -540,23 +540,37 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var ContactForm = function ContactForm() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+    className: "contact-form",
     action: "/contact",
     method: "POST"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Contact Me"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "text",
-    name: "contact[from]",
-    id: "from"
+    name: "contact[name]",
+    id: "name",
+    placeholder: "Name"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "text",
+    name: "contact[email]",
+    id: "email",
+    placeholder: "Email Address"
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "text",
     name: "contact[subject]",
-    id: "subject"
+    id: "subject",
+    placeholder: "Subject"
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
     name: "contact[body]",
     id: "body",
     cols: "30",
-    rows: "10"
-  }));
+    rows: "10",
+    placeholder: "Type your message here"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "submit",
+    value: "Send Message"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Messages will be sent directly to me and I should reply within 24-48hours")));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (ContactForm);
@@ -612,7 +626,7 @@ function (_Component) {
         className: "hero"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
         className: "hero-title"
-      }, "Hi I'm ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Joe")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "a ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Software Developer")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "I am a full-stack developer based out of Philadelphia, PA."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Everything from web apps to websites development is my passion and I enjoy making peoples ideas come to life. I work with many different technologies but primarily with Rails and React. If you'd like to see some of my projects, contact me or hear a little about myself please follow the appropriate links. A blog will also be coming soon which Im very excited to share with you. Thanks for visiting!"));
+      }, "Hi I'm ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Joe")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "a ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Software Developer")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "I am a full-stack developer based out of Philadelphia, PA."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "I love making peoples ideas come to life. I work with many different technologies but primarily with Rails and React. If you'd like to see some of my projects, contact me or hear a little about myself please follow the appropriate links. A blog will also be coming soon which Im very excited to share with you. Thanks for visiting!"));
     }
   }]);
 
@@ -682,54 +696,9 @@ var Landing = function Landing() {
   !*** ./frontend/components/body/projects/projects.jsx ***!
   \********************************************************/
 /*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-
-
-var Projects =
-/*#__PURE__*/
-function (_Component) {
-  _inherits(Projects, _Component);
-
-  function Projects() {
-    _classCallCheck(this, Projects);
-
-    return _possibleConstructorReturn(this, _getPrototypeOf(Projects).apply(this, arguments));
-  }
-
-  _createClass(Projects, [{
-    key: "render",
-    value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Projects");
-    }
-  }]);
-
-  return Projects;
-}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
-
-/* harmony default export */ __webpack_exports__["default"] = (Projects);
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /home/f1nesse13/Documents/projects/jPellPortfolio/frontend/components/body/projects/projects.jsx: JSX attributes must only be assigned a non-empty expression (13:57)\n\n\u001b[0m \u001b[90m 11 | \u001b[39m  render() {\u001b[0m\n\u001b[0m \u001b[90m 12 | \u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 13 | \u001b[39m    \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mstate\u001b[33m.\u001b[39mproject_list\u001b[33m.\u001b[39mmap(project \u001b[33m=>\u001b[39m \u001b[33m<\u001b[39m\u001b[33mProject\u001b[39m name\u001b[33m=\u001b[39m{}\u001b[33m/\u001b[39m\u001b[33m>\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m                                                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 14 | \u001b[39m    \u001b[36mreturn\u001b[39m \u001b[33m<\u001b[39m\u001b[33mdiv\u001b[39m\u001b[33m>\u001b[39m\u001b[33mProjects\u001b[39m\u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mdiv\u001b[39m\u001b[33m>\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 15 | \u001b[39m  }\u001b[0m\n\u001b[0m \u001b[90m 16 | \u001b[39m}\u001b[0m\n    at Object.raise (/home/f1nesse13/Documents/projects/jPellPortfolio/node_modules/@babel/parser/lib/index.js:6325:17)\n    at Object.jsxParseAttributeValue (/home/f1nesse13/Documents/projects/jPellPortfolio/node_modules/@babel/parser/lib/index.js:3422:22)\n    at Object.jsxParseAttribute (/home/f1nesse13/Documents/projects/jPellPortfolio/node_modules/@babel/parser/lib/index.js:3470:44)\n    at Object.jsxParseOpeningElementAfterName (/home/f1nesse13/Documents/projects/jPellPortfolio/node_modules/@babel/parser/lib/index.js:3490:28)\n    at Object.jsxParseOpeningElementAt (/home/f1nesse13/Documents/projects/jPellPortfolio/node_modules/@babel/parser/lib/index.js:3483:17)\n    at Object.jsxParseElementAt (/home/f1nesse13/Documents/projects/jPellPortfolio/node_modules/@babel/parser/lib/index.js:3515:33)\n    at Object.jsxParseElement (/home/f1nesse13/Documents/projects/jPellPortfolio/node_modules/@babel/parser/lib/index.js:3589:17)\n    at Object.parseExprAtom (/home/f1nesse13/Documents/projects/jPellPortfolio/node_modules/@babel/parser/lib/index.js:3596:19)\n    at Object.parseExprSubscripts (/home/f1nesse13/Documents/projects/jPellPortfolio/node_modules/@babel/parser/lib/index.js:8412:23)\n    at Object.parseMaybeUnary (/home/f1nesse13/Documents/projects/jPellPortfolio/node_modules/@babel/parser/lib/index.js:8392:21)\n    at Object.parseExprOps (/home/f1nesse13/Documents/projects/jPellPortfolio/node_modules/@babel/parser/lib/index.js:8267:23)\n    at Object.parseMaybeConditional (/home/f1nesse13/Documents/projects/jPellPortfolio/node_modules/@babel/parser/lib/index.js:8240:23)\n    at Object.parseMaybeAssign (/home/f1nesse13/Documents/projects/jPellPortfolio/node_modules/@babel/parser/lib/index.js:8187:21)\n    at Object.parseFunctionBody (/home/f1nesse13/Documents/projects/jPellPortfolio/node_modules/@babel/parser/lib/index.js:9406:24)\n    at Object.parseArrowExpression (/home/f1nesse13/Documents/projects/jPellPortfolio/node_modules/@babel/parser/lib/index.js:9365:10)\n    at Object.parseExprAtom (/home/f1nesse13/Documents/projects/jPellPortfolio/node_modules/@babel/parser/lib/index.js:8715:18)\n    at Object.parseExprAtom (/home/f1nesse13/Documents/projects/jPellPortfolio/node_modules/@babel/parser/lib/index.js:3601:20)\n    at Object.parseExprSubscripts (/home/f1nesse13/Documents/projects/jPellPortfolio/node_modules/@babel/parser/lib/index.js:8412:23)\n    at Object.parseMaybeUnary (/home/f1nesse13/Documents/projects/jPellPortfolio/node_modules/@babel/parser/lib/index.js:8392:21)\n    at Object.parseExprOps (/home/f1nesse13/Documents/projects/jPellPortfolio/node_modules/@babel/parser/lib/index.js:8267:23)\n    at Object.parseMaybeConditional (/home/f1nesse13/Documents/projects/jPellPortfolio/node_modules/@babel/parser/lib/index.js:8240:23)\n    at Object.parseMaybeAssign (/home/f1nesse13/Documents/projects/jPellPortfolio/node_modules/@babel/parser/lib/index.js:8187:21)\n    at Object.parseExprListItem (/home/f1nesse13/Documents/projects/jPellPortfolio/node_modules/@babel/parser/lib/index.js:9491:18)\n    at Object.parseCallExpressionArguments (/home/f1nesse13/Documents/projects/jPellPortfolio/node_modules/@babel/parser/lib/index.js:8621:22)\n    at Object.parseSubscript (/home/f1nesse13/Documents/projects/jPellPortfolio/node_modules/@babel/parser/lib/index.js:8514:29)\n    at Object.parseSubscripts (/home/f1nesse13/Documents/projects/jPellPortfolio/node_modules/@babel/parser/lib/index.js:8433:19)\n    at Object.parseExprSubscripts (/home/f1nesse13/Documents/projects/jPellPortfolio/node_modules/@babel/parser/lib/index.js:8422:17)\n    at Object.parseMaybeUnary (/home/f1nesse13/Documents/projects/jPellPortfolio/node_modules/@babel/parser/lib/index.js:8392:21)\n    at Object.parseExprOps (/home/f1nesse13/Documents/projects/jPellPortfolio/node_modules/@babel/parser/lib/index.js:8267:23)\n    at Object.parseMaybeConditional (/home/f1nesse13/Documents/projects/jPellPortfolio/node_modules/@babel/parser/lib/index.js:8240:23)");
 
 /***/ }),
 

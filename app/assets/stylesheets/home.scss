@@ -21,7 +21,6 @@
   height: 100%;
   width: 100%;
 
-
   span {
     font-weight: 800;
     color: $black;
@@ -29,8 +28,10 @@
   }
 
   p {
+    display: inline-block;
     font: 300 1.8rem $secondary-font;
     width: 75%;
+    margin-top: 50px;
   }
 }
 
