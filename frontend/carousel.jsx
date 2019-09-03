@@ -61,9 +61,9 @@ class Carousel extends Component {
       window.location.pathname.toString(),
     );
     return (
-      <div className="app-window">
+      <div className="content-window">
         <i
-          className="arrows left-arrow fas fa-arrow-alt-circle-left"
+          className="arrows left-arrow fas fa-arrow-left"
           // Change path in window.location
           onClick={this.decrement}
         ></i>
@@ -74,7 +74,7 @@ class Carousel extends Component {
         <Route exact path="/contact" component={Contact} />
         <Route exact path="/about" component={About} />
         <i
-          className="arrows right-arrow fas fa-arrow-alt-circle-right"
+          className="arrows right-arrow fas fa-arrow-right"
           onClick={this.increment}
         ></i>
       </div>
