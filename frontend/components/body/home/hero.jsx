@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 class Hero extends Component {
   render() {
@@ -12,8 +12,7 @@ class Hero extends Component {
         </h1>
         <p>I am a full-stack developer based out of Philadelphia, PA.</p>
         <p>
-          Everything from web apps to websites development is my passion and I
-          enjoy making peoples ideas come to life. I work with many different
+          I love making peoples ideas come to life. I work with many different
           technologies but primarily with Rails and React. If you'd like to see
           some of my projects, contact me or hear a little about myself please
           follow the appropriate links. A blog will also be coming soon which Im
