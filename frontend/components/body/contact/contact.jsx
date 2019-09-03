@@ -8,7 +8,7 @@ class Contact extends Component {
 
   render() {
     return (
-      <section className="contact_container">
+      <section className="contact">
         <ContactForm />
       </section>
     );
